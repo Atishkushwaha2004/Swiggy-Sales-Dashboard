@@ -1,9 +1,7 @@
-import streamlit as st
+
 import pandas as pd
+import os
 
-st.title("Swiggy Sales Dashboard")
+file_path = os.path.join(os.path.dirname(__file__), "data.xlsx")
 
-df = pd.read_excel("data.xlsx")
-
-st.dataframe(df)
-st.bar_chart(df)
+df = pd.read_excel(file_path)
